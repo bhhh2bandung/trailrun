@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@font-face {
+  font-family: 'Edmund Regular';
+  src: url('../font/Edmund Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+    local('MaterialIcons-Regular'),
+    url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+    url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+    url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+}
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+body {
+	font-family: 'Roboto', sans-serif !important;
+}
+.content {
+  font-family: 'Open Sans', sans-serif !important;
+}
+.bg-hero {
+  background: url('../img/bg-hero2.jpg');
+	background-size: cover;
+	height: 650px;
+	width: 100%;
+}
+.bg-hadiah {
+  background: url('../img/bg-hadiah.jpg');
+  
+}
+.default {
+	color: #1b0050 !important;
+}
+.bg-default {
+  background: #1b0050 !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background: #1b0050 !important;
+  color: #fff !important;
+}
+
+.upper {
+	text-transform: uppercase !important;
+}
+.title {
+	font-family: 'Edmund Regular' !important;
+	font-weight: bold;
+}
+.text-white {
+	color: #fff;
+}
+.pt-6 {
+  padding-top:70px;
+}
+.pb-6 {
+  padding-bottom:70px;
+}
+
+.uk-navbar-item,
+.uk-navbar-nav>li>a,
+.uk-navbar-toggle {
+    /* font-family: 'Roboto' !important; */
+    height: 50px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    font-size: 10px !important;
+}
+.his {
+  height: 40vh;
+}
+.is {
+  height: 5px;
+}
+.bg-smoke {
+  background: whitesmoke;
+}
+.uk-navbar-container:not(.uk-navbar-transparent)
+{
+    background: #1b0050 !important;
+}
+.bold {
+  font-weight: bold;
+}
+.mobile {
+  font-size: 12px;
+}
+.form-control {
+  font-size: 12px;
+  font-family: 'Roboto';
+  padding: 12px;
+}
+.card , .uk-card {
+  color: #000 !important;
+}
+.font-i {
+  font-size: 3em !important;
+}
+label {
+  font-size: 12px;
+}
+.btn {
+  font-size: 12px !important;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.d1 {
+  border-bottom: 1px solid black;
+  width: 50%;
+}
+
+.space-lg {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+.space-m {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+.card {
+  margin-bottom: 1.5rem;
+}
+
+.card[data-toggle="tab"] {
+  cursor: pointer;
+}
+.hr1 {
+  border-top: 2px dotted #c2c2c2 !important;
+}
+.active .step-circle {
+  background: #1b0050;
+  color: #fff;
+}
+.step-circle {
+  padding: 10px;
+  border-radius: 3px;
+  background: whitesmoke;
+}
+.bg-gradient {
+  background: linear-gradient(135deg, #6f42c1 0%, #4582EC 100%);
+}
+.bg-hero1 {
+  background: url('../img/bg-hero2.jpg');
+}
+td {
+  font-size: 13px;
+}
+.capt {
+  text-transform: capitalize;
+}
+.height-70 {
+  min-height: 70vh;
+}
+.lead {
+  font-family: 'Helvetica';
+}
+.icon {
+  font-size: 3em;
+}
