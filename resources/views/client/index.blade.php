@@ -100,8 +100,8 @@
 					<small><p class="lead"><i class="uk-icon" uk-icon="icon:location"></i>Lokasi lomba : Villa Istana Bunga lembang Bandung Jawa Barat Indonesia.</p></small>
 				</div>
 				<div class="pt-4">
-					<a href="" class="uk-button bg-default " title="">Daftar sekarang</a>
-					<a href="" class="uk-button bg-default " title="">Info Lomba</a>
+					<a href="" class="uk-button btn-warning " title="">Daftar sekarang</a>
+					<a href="" class="uk-button bg-default border" title="">Info Lomba</a>
 				</div>
 		    </div>
 		</div>
@@ -236,5 +236,21 @@
 
                         </div>
             </section>
+<section>
+		<div class="space-m bg-smoke">
+		<div class="container">
+			<h1 class="title default mb-20">Sponsorship</h1>
+			<div class="row">
+				<div class="col-md-4">
+					<img src="{{ asset('img/spon1.jpg') }}" width="100%" alt="">
+				</div><div class="col-md-4">
+					<img src="{{ asset('img/spon2.jpg') }}" width="100%" alt="">
+				</div><div class="col-md-4">
+					<img src="{{ asset('img/spon3.jpg') }}" width="100%" alt="">
+				</div>
 
+			</div>
+		</div>
+		</div>
+	</section>
 @stop

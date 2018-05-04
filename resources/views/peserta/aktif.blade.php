@@ -1,129 +1,63 @@
 @extends('index')
 @include('layouts.header')
 @section('content')
-                        <main>
-                            <div class="bg-reg content">
-                                        <div class="pt-5 pb-5">
-                                            <div class="container ">
-                                                   <div class=" bg-default uk-inline">
-                                                      <img src="{{ asset('img/bg-reg4.png') }}" class="uk-visible@m" alt="">
-                                                      <div class="uk-position-center">
-                                                        <div style="display:none;" id="kodeunik" >
-                                                          {{ $data->id }}
-                                                        </div>
-                                                        
-                                                            <h3 class="display-1 text-white content bold uk-visible@m" id="kode"></h3>
-                                                            <p class="title text-white text-center h4">{{ $data->upload->peserta->kelamin->kode }} | {{ $data->upload->peserta->kategori->judul }}</p>
-                                                      </div>
-                                                      <div class="uk-card-body text-center text-white bold uk-hidden@m">
-                                                        <p class="uk-margin-remove upper"> Nomor Peserta Lomba</p>
-                                                          <div class="uk-placeholder">
-                                                              <h3>000{{ $data->id }}</h3>
-                                                          </div>
-                                                        <small>Selamat anda telah resmi menjadi peserta lomba BHHH2 Trail Run 2018. Pastikan anda hadir untuk mengikuti lomba.</small>
-                                                      </div>
-                                                    </div>
-                                                     <!-- account -->
-                                                          <div class="uk-card-body uk-card-default uk-visible@m">
-                                                              <div class="uk-grid-divider uk-child-width-expand@s upper default " uk-grid>
-                                                                      <div>
-                                                                          <div class="">
-                                                                              <p class="uk-margin-remove">Nama : {{ Auth::user()->name }}</p>
-                                                                          </div>
-                                                                      </div>
-                                                                      <div>
-                                                                          <div class="">
-                                                                              <p class="uk-margin-remove">No Peserta lomba : <b>000{{ $data->id}}</b></p>
-                                                                          </div>
-                                                                      </div>
-                                                                      <div>
-                                                                          <div class="">
-                                                                              <p class="uk-margin-remove">Status  :  <b class="btn-success  btn-sm">{{ $data->status }} verifikasi</b></p>
-                                                                          </div>
-                                                                      </div>
-                                                                      
-                                                                  </div>
-                                                          </div>
-
-                                                          <div class="uk-card-default upper default uk-hidden@m">
-                                                              <div class="uk-padding-small">
-                                                                <ul class="uk-list">
-                                                                  <li>Nama : {{ Auth::user()->name }}</li>
-                                                                  <li>Status  :   <b class="bg-success text-white  btn-sm"><small>{{ $data->status }} verifikasi</small></b></li>
-                                                                </ul>
-                                                              </div>
-                                                            </div>
-                                                          <!-- <a class="uk-button bg-default text-white btn-block" href="" title="" data-toggle="modal" data-target="#exampleModalLong">lihat detail akun anda</a> -->
-                                                          <!-- informasi -->
-                                                          
-                                                          <div class="pt-3">
-                                                                <div class="card   uk-card-body black">
-                                                                    <p class="default bold upper">Informasi peserta</p>
-                                                                      <ul class="list-group">
-                                                                        <li>Selamat Anda sudah resmi terdaftar sebagai peserta lomba.</li>
-                                                                        <li>Pastikan anda membawa KTP (Kartu Tanda Penduduk) yang asli sebagai identitas yang akan ditunjukan kepada panitia lomba untuk pengambilan nomor peserta, kaos dan sourvenir lainnya.</li>
-                                                                        <li>Jika peserta lomba membatalkan lomba atau berhalangan hadir, wajib memberitahu panitia lomba melalui Email kami. Biaya yang sudah ditransfer tidak bisa dikembalikan.</li>
-                                                                        <li>Pastikan peserta lomba hadir 30 menit sebelum perlombaan berlangsung.</li>
-                                                                      </ul>
-                                                                </div>
-                                                                <a class="btn btn-warning  btn-block" href="/peserta" title="">Lihat Peserta Lomba</a>
-                                                          </div>
-                                              </div>
-                                        </div>
-                          </div>
-                </main>
-
-
-             <!-- Modal -->
-<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title default bold" id="exampleModalLongTitle"><i class="uk-icon uk-margin-small-right" uk-icon="icon:info"></i>Details Account</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+    <main>
+      <div class="space-m">
+        <div class="container">
+          <!-- Badge information -->
+          <ul class="nav nav-activity-profile ">
+            <li class="nav-item card bg-default upper mr-2 uk-visible@m"><a href="" class="nav-link text-white"><i class="icon uk-inline fa fa-user-circle fa-3x"></i> isi formulir</a></li>
+            <li class="nav-item card bg-default upper mr-2 uk-visible@m"><a href="" class="nav-link text-white"><i class="icon uk-inline fa fa-credit-card fa-3x"></i> pembayran tiket</a></li>
+            <li class="nav-item card upper mr-2 bg-default uk-visible@m"><a href="" class="nav-link text-white"><i class="icon uk-inline ion-document-text"></i> verifikasi</a></li>
+            <li class="nav-item card upper bg-warning "><a href="" class="nav-link default"><i class="icon uk-inline fa fa-check-circle-o fa-3x "></i> selesai</a></li>
+          </ul>
+          
+          <!-- Alert -->
+          <div class="alert alert-solid alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+            <strong><i class="icon fa fa-warning"></i> Selesai !!</strong> Selamat anda resmi terdaftar sebagai peserta lomba.
+          </div>
+          <!-- Account -->
+          <div style="display:none;" id="kodeunik" >{{ $data->id }}</div>
+          <div class="row no-gutters">
+              <div class="col-sm-4">
+                <div class="card p-3 mr-2">
+                  <h6 class="upper bold">Nama lengkap</h6>
+                  <h1 class="upper">{{ Auth::user()->name }}</h1>
+                  <span>BHHH2 TRAIL RUN 2018.</span>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+              <div class="col-sm-4">
+                <div class="card p-3 mr-2">
+                  <h6 class="upper bold">Nomor peserta</h6>
+                  <h1 id="kode"></h1>
+                  <span>BHHH2 TRAIL RUN 2018.</span>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+              <div class="col-sm-4">
+                <div class="card bg-default p-3">
+                  <h6 class="upper text-white bold">account details</h6>
+                  <a href="#" title="" class="text-warning"><h1 class="upper"><i class="icon fa fa-download"></i> Download</h1></a>
+                  <span class="text-white">BHHH2 TRAIL RUN 2018.</span>
+                </div><!-- card -->
+              </div><!-- col-6 -->
+            </div>
+            <!-- Details -->
+            <div class="">
+              <label class="section-label-sm upper bold">information</label>
+              <small><ul class="list-group">
+                <li>Selamat Anda sudah resmi terdaftar sebagai peserta lomba.</li>
+                <li>Untuk mengetahui details account silahkan klik download pada button di atas.</li>
+                <li>Pastikan anda membawa KTP (Kartu Tanda Penduduk) yang asli sebagai identitas yang akan ditunjukan kepada panitia lomba untuk pengambilan nomor peserta, kaos dan sourvenir lainnya.</li>
+                <li>Jika peserta lomba membatalkan lomba atau berhalangan hadir, wajib memberitahu panitia lomba melalui Email kami. Biaya yang sudah ditransfer tidak bisa dikembalikan.</li>
+                <li>Peserta di sarankan memakai sepatu untuk mengikuti perlombaan.</li>
+                <li>Pastikan peserta lomba hadir 30 menit sebelum perlombaan berlangsung.</li>
+              </ul></small>
+            </div>
+            <!-- End details -->
+        </div>
       </div>
-      <div class="modal-body">
-                
-                <table class="uk-table">
-    <tbody>
-        <tr>
-            <td class="default bold">Nama Lengkap</td>
-            <td>:</td>
-            <td>{{ Auth::user()->name }}</td>
-        </tr>
-        <tr>
-            <td class="default bold">Jenis Kelamin</td>
-            <td>:</td>
-            <td>{{ $data->upload->peserta->kelamin }}</td>
-        </tr>
-        <tr>
-            <td class="default bold">Komunitas</td>
-            <td>:</td>
-            <td>{{ $data->upload->peserta->komunitas }}</td>
-        </tr>
-        <tr>
-            <td class="default bold">Kategori lomba</td>
-            <td>:</td>
-            <td>{{ $data->upload->peserta->tiket->judul }}</td>
-        </tr>
-        <tr>
-            <td class="default bold">Ukuran Kaos</td>
-            <td>:</td>
-            <td>{{ $data->upload->peserta->kaos }}</td>
-        </tr>
-    </tbody>
-</table>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="uk-button btn-success" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
-<script type="text/javascript" >
-                                                          
-                                                        </script>
+    </main>
 @endsection

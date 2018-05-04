@@ -1,7 +1,7 @@
 @extends('index')
 @include('layouts.header')
 @section('content')
-      <section class="bg-hero1 space-m">
+<section class="bg-hero1 space-m">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-12 col-md-6 col-lg-5 section-intro">
@@ -20,17 +20,13 @@
                 <!--end of container-->
             </section>
             <div class="space-m">
-            <section>
-              <div class="container">
-                  <div class="input-group mb-3">
-                    <input type="text" class="form-control p-3" placeholder="Cari Nama Anda.." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <button class="btn " type="button"><i class="uk-icon" uk-icon="icon:search"></i></button>
-                    </div>
-                  </div>
-                  <!-- <small><p class="">Silahkan lakukan pencarian untuk melihat nama anda pada table di bawah.</p> -->
+              
+              <section>
+              <div class="container content">
+                <p><small><i>* Segera lakukan pembayaran dahulu agar nama anda muncul pada table di bawah ini. <br> Jika anda belum mendaftar silahkan lakukan pendaftaran <a href="{{ route('register') }}" title="">di sini.</a></i></small></p>
               </div>
             </section>
+
             <section>
               <div class="container ">
               <div class="uk-overflow-auto card">
@@ -59,10 +55,19 @@
               </div>
               </div>
             </section>
-            <section>
-              <div class="container content">
-                <p><small><i>* Lakukan pembayaran dahulu agar nama anda muncul pada table di atas.</i></small></p>
-              </div>
-            </section>
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+            
+
+
+
           </div>
+
 @stop

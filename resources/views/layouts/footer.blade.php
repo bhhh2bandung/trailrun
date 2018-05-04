@@ -40,3 +40,10 @@
 		</div>
 	</div>
 </footer>
+<div class="bg-warning text-center">
+	<div class="p-2">
+		<div class="container">
+			<small><i><sup>&copy;</sup>Copyright all reserved || bhhh2trailrun.com</i></small>
+		</div>
+	</div>
+</div>
